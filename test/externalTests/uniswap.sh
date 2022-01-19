@@ -29,7 +29,7 @@ BINARY_TYPE="$1"
 BINARY_PATH="$2"
 
 function compile_fn { yarn compile; }
-function test_fn { yarn test; }
+function test_fn { SNAPSHOT_UPDATE=1 npx hardhat test; }
 
 function uniswap_test
 {
